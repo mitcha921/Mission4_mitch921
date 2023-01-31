@@ -6,6 +6,7 @@
     var finalExamGrade = parseFloat($("#finalExam").val())
     var intexGrade = parseFloat($("#intex").val())
 
+    //weight each inputted grade percentage
     var assignmentsWeight = (assignmentsGrade * .5)
     var groupProjectsWeight = (groupProjectsGrade * .1)
     var quizzesWeight = (quizzesGrade * .1)
@@ -13,9 +14,11 @@
     var finalExamWeight = (finalExamGrade * .1)
     var intexWeight = (intexGrade * .1)
 
+    //calculate final grade percentage
     var finalGradeNumber = (assignmentsWeight + groupProjectsWeight + quizzesWeight + midtermExamWeight +
         finalExamWeight + intexWeight)
 
+    //initialize and determine letter grade
     var finalGradeLetter
     if (finalGradeNumber >= 94) {
         finalGradeLetter = "A"
@@ -54,6 +57,7 @@
         finalGradeLetter = "E"
     }
 
+    //output letter grade into form
     $("#letterGrade").val(finalGradeLetter)
 
 });
