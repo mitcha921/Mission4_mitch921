@@ -53,11 +53,10 @@
     else if (finalGradeNumber >= 60) {
         finalGradeLetter = "D-"
     }
-    else {
-        finalGradeLetter = "E"
-    }
+    else {finalGradeLetter = "E" }
 
     //output letter grade into form
-    $("#letterGrade").val(finalGradeLetter)
+
+    alert("Your final grade is: " + finalGradeLetter)
 
 });

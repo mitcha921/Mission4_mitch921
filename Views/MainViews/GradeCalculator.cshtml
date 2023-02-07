@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalculatorModel;
+<!--grade calculator-->
+<h2>Grade Calculator</h2>
+<p>Input your grade percentage for each category (e.g. if you had an 88% for "Assignments" you would type "88")</p>
+<form method="post">
+    <label>Assignments: </label>
+    <input id="assignments" asp-for="Assignments" /> <br />
+    <label>Group Project: </label>
+    <input id="groupProjects" asp-for="GroupProjects" /> <br />
+    <label>Quizzes: </label>
+    <input id="quizzes" asp-for="Quizzes" /> <br />
+    <label>Midterm Exam: </label>
+    <input id="midtermExam" asp-for="MidtermExam" /> <br />
+    <label>Final Exam: </label>
+    <input id="finalExam" asp-for="FinalExam" /> <br />
+    <label>INTEX: </label>
+    <input id="intex" asp-for="Intex" /> <br />
+    <input id="calculateGrade" type="submit" value="Calculate Grade" /><br />
+    <label>Your Final Grade: </label>
+    <input type="text" id="letterGrade" />
+    <div asp-validation-summary="All"></div>
+</form>
+
+
